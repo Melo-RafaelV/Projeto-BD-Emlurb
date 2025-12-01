@@ -5,7 +5,7 @@ SELECT
     dl.rpa,
     dl.bairro,
     COUNT(*) AS volume_chamados,
-    CAST(AVG(CAST(fc.tempo_conclusao AS NUMERIC)) AS INTEGER) AS media_dias_conclusao
+    CAST(AVG(fc.tempo_conclusao) AS INTEGER) AS media_dias_conclusao
 FROM 
     fato_chamados fc
 JOIN 

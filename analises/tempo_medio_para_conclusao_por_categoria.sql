@@ -2,7 +2,7 @@
 
 SELECT 
     ds.gruposervico_descricao AS categoria,
-    ROUND(AVG(CAST(fc.tempo_conclusao AS NUMERIC))) AS media_dias
+    ROUND(AVG(fc.tempo_conclusao)) AS media_dias
 FROM 
     fato_chamados fc
 JOIN 
